@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rysowanie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="700" Width="925">
+
+
+    <Grid Margin="0,35,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Menu Name="v_Menu" Grid.Row="0" Margin="0,-34,10,0">
+            <MenuItem Header="Program">
+                <MenuItem Header="New" Click="New_Click"/>
+                <MenuItem Header="Save As" Click="SaveAs_Click"/>
+                <MenuItem Header="Open" Click="Open_Click"/>
+                <MenuItem Header="Close" Click="Close_Click"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Background="LightSeaGreen" Margin="1, 0, 0 ,0">
+            <ToolBar x:Name="TooBar" Height="26" Canvas.Left="10" Canvas.Top="10" Width="497" Margin="10,0,10,268" Grid.Row="1" Band="1" BandIndex="1" Background="LightSeaGreen">
+                <Button Height="21" VerticalAlignment="Top" Width="75" BorderBrush="LightSkyBlue">
+                    <ComboBox Width="120" SelectionChanged="line_ComboBox" x:Name="linecombo">
+                        <ComboBoxItem>Linia cienka </ComboBoxItem>
+                        <ComboBoxItem>Linia średnia</ComboBoxItem>
+                        <ComboBoxItem>Linia gruba</ComboBoxItem>
+                    </ComboBox>
+                              
+                </Button>
+                <Button Content="Kolor" Height="21" VerticalAlignment="Top" Width="75" BorderBrush="LightSkyBlue" Click="Kolor_Click" />
+                <Button Content="Usówanie" Height="21" VerticalAlignment="Top" Width="75" BorderBrush="LightSkyBlue" Click="Usowanie_Click"/>
+                <Button Content="Transformacja" Height="21" VerticalAlignment="Top" Width="85" BorderBrush="LightSkyBlue" Click="Transformacja_Click"/>
+
+            </ToolBar>
+        </ToolBarTray>
+        <Canvas Name="v_Canvas" Grid.Row="1" Background="White" ClipToBounds="True" Margin="5,25,0,0">
+
+        </Canvas>
+
     </Grid>
 </Window>

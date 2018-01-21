@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ColorPickerWPF">
+      <HintPath>..\ColorPickerWPF.1.0.7\lib\net452\ColorPickerWPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -92,6 +95,47 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElipseTool\ElipseTool.csproj">
+      <Project>{ecc31d25-13cf-414a-b294-b82382b9cb9d}</Project>
+      <Name>ElipseTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LineTool\LineTool.csproj">
+      <Project>{8692f7a9-57a6-471c-9d47-5d6d05a06ffb}</Project>
+      <Name>LineTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
+      <Project>{f1d3932f-3b0c-4b1c-ace0-a9f22e1b5e82}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RectangleTool\RectangleTool.csproj">
+      <Project>{55178783-31d5-4287-93e1-0498aa22038f}</Project>
+      <Name>RectangleTool</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Plugins\ElipseTool.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\ElipseTool.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\LineTool.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\LineTool.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\PluginInterface.dll" />
+    <Content Include="Plugins\PluginInterface.pdb" />
+    <Content Include="Plugins\RectangleTool.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plugins\RectangleTool.pdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
